@@ -76,7 +76,7 @@
 <body>
     <div class="container">
         <h1>Privacy Policy</h1>
-        <p class="last-updated">Last updated: May 9, 2026</p>
+        <p class="last-updated">Last updated: June 11, 2026</p>
         <p>Mevo Studios LLC ("we", "our", or "us") operates the <strong>Bull Signals</strong> mobile application. This Privacy Policy explains how information is collected, used, and disclosed when you use our app.</p>
         <h2>Your Consent</h2>
         <p>By downloading, installing, or using the Bull Signals app, you agree to the collection and use of information as described in this Privacy Policy. If you do not agree with this policy, please do not use the app.</p>
@@ -92,9 +92,10 @@
             <li>We do not collect location data.</li>
             <li>We do not access your camera, microphone, contacts, or photos.</li>
             <li>We do not use analytics or tracking tools of our own.</li>
+            <li>We do not collect or transmit any chart drawing annotations, technical indicator settings, or interactive chart preferences. These are processed entirely on your device.</li>
         </ul>
         <h2>Data Stored on Your Device</h2>
-        <p>Your watchlist, alert settings, groups, and preferences are stored locally on your device. If you delete the app, this data is permanently removed.</p>
+        <p>Your watchlist, alert settings, groups, preferences, and any chart drawing annotations (horizontal lines, trend lines) created in the interactive candlestick chart are stored locally on your device. Technical indicator selections (RSI, SMA, Bollinger Bands) and chart period/interval preferences are also stored locally. If you delete the app, this data is permanently removed.</p>
         <h2>Data Retention</h2>
         <p>Your watchlist data is retained on our server only while you actively use the app. If you disable notifications or uninstall the app, your device registration is removed from our server. Local data persists only as long as the app is installed on your device. We have no ability to recover your local data after deletion.</p>
         <h2>Third-Party Services</h2>
@@ -115,13 +116,14 @@
         <h3>Firebase Cloud Messaging (Google)</h3>
         <p>The app uses Firebase Cloud Messaging to deliver push notifications for price alerts. Firebase may collect certain technical data such as device type, operating system version, and app instance identifiers. This data is used solely for message delivery and app functionality, and is not used for advertising or tracking purposes. For more information, see <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase's Privacy Documentation</a>.</p>
         <h3>Financial Data APIs</h3>
-        <p>The app fetches live price data and chart history from:</p>
+        <p>The app fetches live price data, chart history, and candlestick (OHLCV) data from:</p>
         <ul>
-            <li><strong>Yahoo Finance API</strong> — for stock prices and chart data</li>
-            <li><strong>Coinbase Exchange API</strong> — for cryptocurrency prices and chart data</li>
-            <li><strong>CoinGecko API</strong> — for cryptocurrency market caps, metadata, and market cap rankings</li>
+            <li><strong>Yahoo Finance API</strong> — for stock prices, chart data, candlestick data (open, high, low, close, volume), and pre-market/after-hours pricing</li>
+            <li><strong>Coinbase Exchange API</strong> — for cryptocurrency prices, chart data, and candlestick data (open, high, low, close, volume)</li>
+            <li><strong>CoinGecko API</strong> — for cryptocurrency market caps, metadata, market cap rankings, OHLC chart data, and coin search/discovery</li>
+            <li><strong>Kraken API</strong> — for cryptocurrency prices as a fallback when other sources are unavailable</li>
         </ul>
-        <p>These requests contain only stock symbols or coin identifiers. For your watchlist, only the symbols you have added are sent. The "Top 7 by Mkt Cap" feature in the Orbs view also queries CoinGecko's public market rankings endpoint (no personal data is sent). No personal information is transmitted to any of these services. Data from these APIs is used across the app including the watchlist, charts, alerts, Orbs view, "Magnificent Seven" grouping, and "Top 7 by Mkt Cap" crypto rankings.</p>
+        <p>These requests contain only stock symbols or coin identifiers. For your watchlist, only the symbols you have added are sent. The "Top 7 by Mkt Cap" feature in the Orbs view also queries CoinGecko's public market rankings endpoint (no personal data is sent). No personal information is transmitted to any of these services. Data from these APIs is used across the app including the watchlist, charts, interactive candlestick charts, technical indicators (RSI, SMA, Bollinger Bands), alerts, Orbs view, "Magnificent Seven" grouping, and "Top 7 by Mkt Cap" crypto rankings.</p>
         <h3>Yahoo Finance RSS (News)</h3>
         <p>The app fetches news headlines from Yahoo Finance RSS feeds. When you view news for a symbol, the app requests the RSS feed for that ticker. No personal information is sent with these requests.</p>
         <h3>In-App Purchases</h3>
@@ -155,7 +157,7 @@
         <h3>European Economic Area Residents (GDPR)</h3>
         <p>If you are located in the European Economic Area, you have the right to access, correct, or delete your personal data, as well as the right to restrict or object to processing. The data we store (device token and watchlist) is not personally identifiable. You may delete all app data by uninstalling the app, and you may control ad personalization through your device's privacy settings. The Google User Messaging Platform may present a consent form to manage your ad preferences where required by law.</p>
         <h3>International Users</h3>
-        <p>Bull Signals is available worldwide. By using the app, you understand that certain third-party services (Google AdMob, Firebase, CoinGecko, Yahoo Finance, Coinbase) may process data in countries other than your own. These services maintain their own privacy policies governing the transfer and processing of data.</p>
+        <p>Bull Signals is available worldwide. By using the app, you understand that certain third-party services (Google AdMob, Firebase, CoinGecko, Yahoo Finance, Coinbase, Kraken) may process data in countries other than your own. These services maintain their own privacy policies governing the transfer and processing of data.</p>
         <h2>Children's Privacy</h2>
         <p>Bull Signals is not directed at anyone under the age of 18. We do not knowingly collect personal information from anyone under 18. If you believe a minor has provided personal information through the app, please contact us so we can take appropriate action.</p>
         <h2>Your Choices</h2>
@@ -165,6 +167,8 @@
             <li>You can subscribe to remove all advertisements.</li>
             <li>You can delete the app to remove all locally stored data and server-side registrations.</li>
         </ul>
+        <h2>Disclaimer</h2>
+        <p>Bull Signals is an entertainment and informational tool only. It is not a financial advisor, broker, or investment service. Nothing in this app — including prices, charts, candlestick data, technical indicators (RSI, SMA, Bollinger Bands), pre-market/after-hours data, news, alerts, or any other feature — constitutes financial advice, investment advice, trading signals, or any form of professional recommendation. All data is sourced from third parties and may be delayed, incomplete, or inaccurate. Nothing in this app guarantees that you will make any money. You could lose money at any time. Trading stocks and cryptocurrencies involves substantial risk, including the potential loss of your entire investment. Trade at your own risk. Do your own research. Always consult a qualified, licensed financial advisor before making any investment decisions. You are solely responsible for your own trading and investment decisions.</p>
         <h2>Changes to This Privacy Policy</h2>
         <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated "Last updated" date. We encourage you to review this page periodically. Your continued use of the app after changes are posted constitutes your acceptance of the revised policy.</p>
         <div class="contact">
