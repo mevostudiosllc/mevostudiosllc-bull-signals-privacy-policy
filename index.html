@@ -76,7 +76,7 @@
 <body>
     <div class="container">
         <h1>Privacy Policy</h1>
-        <p class="last-updated">Last updated: June 14, 2026</p>
+        <p class="last-updated">Last updated: June 16, 2026</p>
         <p>Mevo Studios LLC ("we", "our", or "us") operates the <strong>Bull Signals</strong> mobile application. This Privacy Policy explains how information is collected, used, and disclosed when you use our app.</p>
         <h2>Your Consent</h2>
         <p>By downloading, installing, or using the Bull Signals app, you agree to the collection and use of information as described in this Privacy Policy. If you do not agree with this policy, please do not use the app.</p>
@@ -114,28 +114,31 @@
         <h3>Google User Messaging Platform (UMP)</h3>
         <p>The app includes the Google User Messaging Platform SDK, which may be used to present consent forms to users in regions that require it (such as the European Economic Area under GDPR). This SDK helps manage ad personalization consent preferences. For more information, see <a href="https://developers.google.com/admob/ump" target="_blank" rel="noopener">Google's UMP documentation</a>.</p>
         <h3>Firebase Cloud Messaging (Google)</h3>
-        <p>The app uses Firebase Cloud Messaging to deliver push notifications for price alerts. Firebase may collect certain technical data such as device type, operating system version, and app instance identifiers. This data is used solely for message delivery and app functionality, and is not used for advertising or tracking purposes. For more information, see <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase's Privacy Documentation</a>.</p>
+        <p>The app uses Firebase Cloud Messaging to deliver push notifications for price alerts and Fast Mover notifications. Firebase may collect certain technical data such as device type, operating system version, and app instance identifiers. This data is used solely for message delivery and app functionality, and is not used for advertising or tracking purposes. For more information, see <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase's Privacy Documentation</a>.</p>
         <h3>Financial Data APIs</h3>
-        <p>The app fetches live price data, chart history, candlestick (OHLCV) data, and market metrics from:</p>
+        <p>The app fetches live price data, chart history, candlestick (OHLCV) data, historical price data, and market metrics from:</p>
         <ul>
-            <li><strong>Yahoo Finance API</strong> — for stock prices, chart data, candlestick data (open, high, low, close, volume), and pre-market/after-hours pricing</li>
+            <li><strong>Yahoo Finance API</strong> — for stock prices, chart data, candlestick data (open, high, low, close, volume), historical daily closing prices for Fast Mover calculations, and pre-market/after-hours pricing</li>
             <li><strong>Coinbase Exchange API</strong> — for cryptocurrency prices, chart data, and candlestick data (open, high, low, close, volume)</li>
-            <li><strong>CoinGecko API</strong> — for cryptocurrency market caps, metadata, market cap rankings, OHLC chart data, coin search/discovery, and total crypto market capitalization</li>
+            <li><strong>CoinGecko API</strong> — for cryptocurrency market caps, metadata, market cap rankings, OHLC chart data, coin search/discovery, total crypto market capitalization, and historical price data for Fast Mover calculations</li>
             <li><strong>Kraken API</strong> — for cryptocurrency prices as a fallback when other sources are unavailable</li>
             <li><strong>FearGreedChart.com API</strong> — for the Crypto Fear & Greed Index sentiment data</li>
         </ul>
-        <p>These requests contain only stock symbols, coin identifiers, or general market data queries. For your watchlist, only the symbols you have added are sent. The "Top 7 by Mkt Cap" feature in the Orbs view also queries CoinGecko's public market rankings endpoint (no personal data is sent). The Fear & Greed Index and total crypto market cap requests contain no personal data. No personal information is transmitted to any of these services. Data from these APIs is used across the app including the watchlist, charts, interactive candlestick charts, technical indicators (RSI, SMA, Bollinger Bands), alerts, Orbs view, "Magnificent Seven" grouping, "Top 7 by Mkt Cap" crypto rankings, Fear & Greed Index display, and total crypto market capitalization display.</p>
+        <p>These requests contain only stock symbols, coin identifiers, or general market data queries. For your watchlist, only the symbols you have added are sent. Historical price data is fetched for Fast Mover detection and cached on our server (no personal data is included in these requests). The "Top 7 by Mkt Cap" feature in the Orbs view also queries CoinGecko's public market rankings endpoint (no personal data is sent). The Fear & Greed Index and total crypto market cap requests contain no personal data. No personal information is transmitted to any of these services. Data from these APIs is used across the app including the watchlist, charts, interactive candlestick charts, technical indicators (RSI, SMA, Bollinger Bands), alerts, Fast Mover notifications, Orbs view, "Magnificent Seven" grouping, "Top 7 by Mkt Cap" crypto rankings, Fear & Greed Index display, and total crypto market capitalization display.</p>
         <h3>Yahoo Finance RSS (News)</h3>
         <p>The app fetches news headlines from Yahoo Finance RSS feeds. When you view news for a symbol, the app requests the RSS feed for that ticker. No personal information is sent with these requests.</p>
         <h3>In-App Purchases</h3>
         <p>The app offers an auto-renewable monthly subscription ($3.99/month) to remove all advertisements and unlock additional features. This transaction is processed entirely by Apple through the App Store. We do not collect or have access to any payment or billing information.</p>
         <h2>How We Use Your Information</h2>
         <ul>
-            <li>To deliver price alerts via push notifications</li>
+            <li>To deliver price alerts via push notifications (including user-set threshold alerts and automatic Fast Mover notifications for daily, weekly, monthly, and yearly price movements)</li>
+            <li>To calculate percentage changes from historical price data for Fast Mover detection (this data is cached on our server and is not personally identifiable)</li>
             <li>To display advertisements (free users only)</li>
             <li>To improve app performance and fix bugs</li>
         </ul>
         <p>We do not sell, trade, or share your personal information with third parties for marketing purposes.</p>
+        <h2>Fast Mover Notifications</h2>
+        <p>The app automatically sends "Fast Mover" push notifications when a stock or cryptocurrency on your personal watchlist experiences significant price movement. These notifications are calculated from third-party historical price data and include daily, weekly, monthly, and yearly time periods. Fast Mover notifications apply only to symbols you have added to your watchlist. No personal data is used in these calculations. Historical price data used for these calculations is cached on our server and associated only with stock/crypto symbols, not with any user or device identifier. You can stop receiving Fast Mover notifications at any time by disabling push notifications in your device settings (Settings > Notifications > Bull Signals) or by disabling notifications within the app's menu.</p>
         <h2>Ad Tracking</h2>
         <p>When you first open the app, iOS will ask whether you allow Bull Signals to track your activity across other companies' apps and websites. This permission (App Tracking Transparency) controls whether Google AdMob can access your device's advertising identifier (IDFA) to serve personalized ads.</p>
         <ul>
@@ -163,13 +166,13 @@
         <p>Bull Signals is not directed at anyone under the age of 18. We do not knowingly collect personal information from anyone under 18. If you believe a minor has provided personal information through the app, please contact us so we can take appropriate action.</p>
         <h2>Your Choices</h2>
         <ul>
-            <li>You can disable push notifications at any time in your device Settings.</li>
+            <li>You can disable push notifications (including Fast Mover notifications) at any time in your device Settings or within the app's menu.</li>
             <li>You can allow or deny ad tracking in Settings > Privacy & Security > Tracking.</li>
             <li>You can subscribe to remove all advertisements.</li>
             <li>You can delete the app to remove all locally stored data and server-side registrations.</li>
         </ul>
         <h2>Disclaimer</h2>
-        <p>Bull Signals is an entertainment and informational tool only. It is not a financial advisor, broker, or investment service. Nothing in this app — including prices, charts, candlestick data, technical indicators (RSI, SMA, Bollinger Bands), pre-market/after-hours data, the Fear & Greed Index, total crypto market capitalization, news, alerts, or any other feature — constitutes financial advice, investment advice, trading signals, or any form of professional recommendation. The Fear & Greed Index is a third-party sentiment indicator and does not predict future price movements, does not guarantee profits, and does not constitute financial advice. All data is sourced from third parties and may be delayed, incomplete, or inaccurate. Nothing in this app guarantees that you will make any money. You could lose money at any time. Trading stocks and cryptocurrencies involves substantial risk, including the potential loss of your entire investment. Trade at your own risk. Do your own research. Always consult a qualified, licensed financial advisor before making any investment decisions. You are solely responsible for your own trading and investment decisions.</p>
+        <p>Bull Signals is an entertainment and informational tool only. It is not a financial advisor, broker, or investment service. Nothing in this app — including prices, charts, candlestick data, technical indicators (RSI, SMA, Bollinger Bands), pre-market/after-hours data, the Fear & Greed Index, total crypto market capitalization, news, alerts, Fast Mover notifications (daily, weekly, monthly, yearly), or any other feature — constitutes financial advice, investment advice, trading signals, or any form of professional recommendation. Fast Mover notifications are informational only and do not indicate that any asset will continue to move in any direction. The percentage and dollar values in Fast Mover notifications are calculated from third-party historical price data and are approximate — they can be wrong and should not be used to buy or sell any stock, cryptocurrency, or other financial instrument. Values may be temporarily inaccurate around stock splits, reverse splits, or other corporate actions. The Fear & Greed Index is a third-party sentiment indicator and does not predict future price movements, does not guarantee profits, and does not constitute financial advice. All data is sourced from third parties and may be delayed, incomplete, or inaccurate. Nothing in this app guarantees that you will make any money. You could lose money at any time. Trading stocks and cryptocurrencies involves substantial risk, including the potential loss of your entire investment. Trade at your own risk. Do your own research. Always consult a qualified, licensed financial advisor before making any investment decisions. You are solely responsible for your own trading and investment decisions.</p>
         <h2>Changes to This Privacy Policy</h2>
         <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated "Last updated" date. We encourage you to review this page periodically. Your continued use of the app after changes are posted constitutes your acceptance of the revised policy.</p>
         <div class="contact">
